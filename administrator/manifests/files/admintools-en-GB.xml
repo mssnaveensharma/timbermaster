@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="file" version="1.6" method="upgrade" client="site">
+    <name><![CDATA[admintools - en-GB]]></name>
+    <author><![CDATA[AkeebaBackup.com]]></author>
+    <authorurl>http://www.akeebabackup.com</authorurl>
+	<copyright>Copyright (C)2014 AkeebaBackup.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>/Users/nicholas/Projects/akeeba/jadmintools/build/..</version>
+    <creationDate>15 Oct 2014</creationDate>
+    <description><![CDATA[English (United Kingdom) translation file for Admin Tools]]></description>
+	<fileset>
+		<files folder="backend" target="administrator/language/en-GB">
+			<filename>en-GB.com_admintools.ini</filename>
+			<filename>en-GB.com_admintools.menu.ini</filename>
+			<filename>en-GB.com_admintools.sys.ini</filename>
+			<filename>en-GB.mod_atjupgrade.ini</filename>
+			<filename>en-GB.mod_atjupgrade.sys.ini</filename>
+			<filename>en-GB.plg_installer_admintools.ini</filename>
+			<filename>en-GB.plg_installer_admintools.sys.ini</filename>
+			<filename>en-GB.plg_system_admintools.ini</filename>
+			<filename>en-GB.plg_system_admintools.sys.ini</filename>
+			<filename>en-GB.plg_system_atoolsjupdatecheck.ini</filename>
+			<filename>en-GB.plg_system_atoolsjupdatecheck.sys.ini</filename>
+			<filename>en-GB.plg_system_atoolsupdatecheck.ini</filename>
+			<filename>en-GB.plg_system_atoolsupdatecheck.sys.ini</filename>
+			<filename>en-GB.plg_system_oneclickaction.ini</filename>
+			<filename>en-GB.plg_system_oneclickaction.sys.ini</filename>
+		</files>
+		<files folder="frontend" target="language/en-GB">
+			<filename>en-GB.com_admintools.ini</filename>
+		</files>
+	</fileset>
+</extension>

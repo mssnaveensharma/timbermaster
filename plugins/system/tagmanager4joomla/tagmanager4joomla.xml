@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="system" method="upgrade">
+	<name>System - Google Tagmanager 4 Joomla</name>
+	<author>Martijn van Vreeden</author>
+	<creationDate>October 2011</creationDate>
+	<copyright>Copyright (C) 2011 Analytics for Joomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@analyticsforjoomla.com</authorEmail>
+	<authorUrl>www.analyticsforjoomla.com</authorUrl>
+	<version>1.0</version>
+	<description><![CDATA[
+	<style type="text/css" media="all"><!--#extension_container {padding:0px 0px 4px 0px;}h1{clear:both;margin:0px 0px 6px 0px;padding:0px 0px 1px 0px;font-size:16px;border-bottom:1px dotted #505050;}h2 {clear:both;font-size:17px;}.title {margin:4px 0px;font-size:12px;font-weight:bold;}a.share {-moz-background-clip: padding;-moz-border-radius: 5px 5px 5px 5px;border-radius: 5px;background-color: #FFAD2D;border-color: #D5AB55 #C93 #C93 #D5AB55;color: white;float: right;font-size: 100%;font-weight: bold;padding: 4px 7px;text-decoration: none;text-shadow: 1px 1px 1px #E7B403;border-style:solid;border-width: 1px;-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);-webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);}.red {color:#C64934;}#extension_container ul {margin:4px 16px;padding:0px;list-style:square;}#extension_container ul li {margin:2px;padding:0px;}#jw_ext_logo {float:right;background:#fff;border:0px solid #ccc;padding:2px;margin:0px 0px 2px 8px;}a.active,a.focus {outline:0;}--></style><div id="extension_container"><h1><a target="_blank" title="Visit Analytics for Joomla!" href="http://www.analyticsforjoomla.com.com/?utm_medium=plugin">Tagmanager plugin [for Joomla! 1.6.x / 1.7.x]</a></h1>can automatically add the required tracking code to your website, without you having to dig into the coding of your template.<br/><h2>Major Features</h2><ul><li>No More Nerdy HTML or Coding</li><li>Save time with easy code implementation</li></ul><br/>Please visit <a href="http://www.analyticsforjoomla.com?utm_medium=plugin">Analytics for Joomla</a> to get the latest version.<br/><br/>For questions or support, please check out our <a href="http://www.analyticsforjoomla.com/tagmanager/documentation/?utm_medium=plugin">documentation section</a>.<br/><br/>If you enjoy this plugin, please vote on <a href="http://extensions.joomla.org/">Joomla Extensions Directory</a>!</div>
+	]]></description>
+	<files>
+		<filename plugin="tagmanager4joomla">tagmanager4joomla.php</filename>
+	</files>
+<config>
+		<fields name="params" >
+			<fieldset name="basic">
+		<field name="tagmanager_id" type="textarea" default="" label="Tagmanager site tag" description="This is website's number on your tags page in Google Tagmanager" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

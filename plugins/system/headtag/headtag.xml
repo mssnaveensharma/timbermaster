@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYS_HEADTAG</name>
+	<author>Michael Richey</author>
+	<creationDate>Jan 2011</creationDate>
+	<copyright>Copyright (C) 2011 Michael Richey. All rights reserved.</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>headtag@richeyweb.com</authorEmail>
+	<authorUrl>http://www.richeyweb.com</authorUrl>
+	<version>2.5</version>
+	<description>PLG_SYS_HEADTAG_XML_DESC</description>
+	<media folder="media" destination="plg_system_headtag">
+		<file>index.html</file>
+                <file>admin.js</file>
+	</media>
+	<files>
+                <folder>fields</folder>
+		<filename plugin="headtag">headtag.php</filename>
+		<filename>tagparser.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_system_headtag.ini</language>
+		<language tag="en-GB">en-GB.plg_system_headtag.sys.ini</language>
+	</languages>
+	<config>
+	  <fields name="params" addfieldpath="plugins/system/headtag/fields">
+            <fieldset name="basic">
+                <field type="radio" name="afterrender" class="radio btn-group" default="0" label="PLG_SYS_HEADTAG_AFTERRENDER_LABEL" description="PLG_SYS_HEADTAG_AFTERRENDER_DESC">
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+                <field type="radio" name="localonly" class="radio btn-group" default="1" label="PLG_SYS_HEADTAG_LOCALONLY_LABEL" description="PLG_SYS_HEADTAG_LOCALONLY_DESC">
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+                <field type="hidden" name="rules" value="" />
+                <field name="javascripts" type="javascript" label="" />
+            </fieldset>
+	    <fieldset name="menuitem">
+                <field type="menuitem" name="menuitem" class="chzn-done headtagmenuitem" default="" label="PLG_SYS_HEADTAG_MENU_LABEL" description="PLG_SYS_HEADTAG_MENU_DESC">
+                    <option value=""></option>
+                </field>
+                <field type="list" name="menuitemlinktype" class="chzn-done headtagmenuitemlinktype" default="script" label="PLG_SYS_HEADTAG_LINKTYPE_LABEL" description="PLG_SYS_HEADTAG_LINKTYPE_DESC">
+                    <option value="script">PLG_SYS_HEADTAG_SCRIPT</option>
+                    <option value="scriptdeclaration">PLG_SYS_HEADTAG_SCRIPTDECLARATION</option>
+                    <option value="stylesheet">PLG_SYS_HEADTAG_STYLESHEET</option>
+                    <option value="styledeclaration">PLG_SYS_HEADTAG_STYLEDECLARATION</option>
+                    <option value="customtag">PLG_SYS_HEADTAG_CUSTOMTAG</option>
+                </field>
+                <field type="hidden" name="menuitemrulekey" default="0" />
+                <field type="text" name="menuitemlinkfile" default="" class="menuitem script stylesheet" label="PLG_SYS_HEADTAG_LINKFILE_LABEL" description="PLG_SYS_HEADTAG_LINKFILE_DESC"/>
+                <field type="text" name="menuitemcustomtag" default="" class="menuitem customtag" label="PLG_SYS_HEADTAG_CUSTOMTAG_LABEL" description="PLG_SYS_HEADTAG_CUSTOMTAG_DESC"/>
+                <field type="textarea" name="menuitemcodeeditor" class="menuitem scriptdeclaration styledeclaration" label="PLG_SYS_HEADTAG_CODEEDITOR_LABEL" description="PLG_SYS_HEADTAG_CODEEDITOR_DESC"/>
+                <field type="add" name="menuitemadd" group="menuitem" />
+                <field type="update" name="menuitemupdate" group="menuitem" />
+                <field type="remove" name="menuitemremove" group="menuitem" />
+                <field type="spacer" hr="true" />
+                <field type="rules" name="menuitemruledisplay" label="PLG_SYS_HEADTAG_RULEDISPLAY_LABEL" description="PLG_SYS_HEADTAG_RULEDISPLAY_DESC"/>
+                <field type="textarea" name="menuitemrules" default="{}" filter="raw" label="" class="hidden"/>
+            </fieldset>
+	    <fieldset name="accesslevel">
+                <field type="accesslevel" name="accesslevel" class="chzn-done headtagaccesslevel" default="" label="JFIELD_ACCESS_LABEL" description="PLG_SYS_HEADTAG_ACCESSLEVEL_DESC">
+                    <option value=""></option>
+                </field>
+                <field type="list" name="accesslevellinktype" class="chzn-done headtagaccesslevellinktype" default="script" label="PLG_SYS_HEADTAG_LINKTYPE_LABEL" description="PLG_SYS_HEADTAG_LINKTYPE_DESC">
+                    <option value="script">PLG_SYS_HEADTAG_SCRIPT</option>
+                    <option value="scriptdeclaration">PLG_SYS_HEADTAG_SCRIPTDECLARATION</option>
+                    <option value="stylesheet">PLG_SYS_HEADTAG_STYLESHEET</option>
+                    <option value="styledeclaration">PLG_SYS_HEADTAG_STYLEDECLARATION</option>
+                    <option value="customtag">PLG_SYS_HEADTAG_CUSTOMTAG</option>
+                </field>
+                <field type="hidden" name="accesslevelrulekey" default="0" />
+                <field type="text" name="accesslevellinkfile" default="" class="accesslevel script stylesheet" label="PLG_SYS_HEADTAG_LINKFILE_LABEL" description="PLG_SYS_HEADTAG_LINKFILE_DESC"/>
+                <field type="text" name="accesslevelcustomtag" default="" class="accesslevel customtag" label="PLG_SYS_HEADTAG_CUSTOMTAG_LABEL" description="PLG_SYS_HEADTAG_CUSTOMTAG_DESC"/>
+                <field type="textarea" name="accesslevelcodeeditor" class="accesslevel scriptdeclaration styledeclaration" label="PLG_SYS_HEADTAG_CODEEDITOR_LABEL" description="PLG_SYS_HEADTAG_CODEEDITOR_DESC"/>
+                <field type="add" name="accessleveladd" group="accesslevel" />
+                <field type="update" name="accesslevelupdate" group="accesslevel" />
+                <field type="remove" name="accesslevelremove" group="accesslevel" />
+                <field type="spacer" hr="true" />
+                <field type="rules" name="accesslevelruledisplay" label="PLG_SYS_HEADTAG_RULEDISPLAY_LABEL" description="PLG_SYS_HEADTAG_RULEDISPLAY_DESC"/>
+                <field type="textarea" name="accesslevelrules" default="{}" filter="raw" label="" class="hidden"/>
+	    </fieldset>
+	    <fieldset name="usergroup">
+                <field type="usergroup" name="usergroup" class="chzn-done headtagusergroup" default="" label="JLIB_RULES_GROUPS" description="PLG_SYS_HEADTAG_USERGROUP_DESC">
+                    <option value=""></option>
+                </field>
+                <field type="list" name="usergrouplinktype" class="chzn-done headtagusergrouplinktype" default="script" label="PLG_SYS_HEADTAG_LINKTYPE_LABEL" description="PLG_SYS_HEADTAG_LINKTYPE_DESC">
+                    <option value="script">PLG_SYS_HEADTAG_SCRIPT</option>
+                    <option value="scriptdeclaration">PLG_SYS_HEADTAG_SCRIPTDECLARATION</option>
+                    <option value="stylesheet">PLG_SYS_HEADTAG_STYLESHEET</option>
+                    <option value="styledeclaration">PLG_SYS_HEADTAG_STYLEDECLARATION</option>
+                    <option value="customtag">PLG_SYS_HEADTAG_CUSTOMTAG</option>
+                </field>
+                <field type="hidden" name="usergrouprulekey" default="0" />
+                <field type="text" name="usergrouplinkfile" default="" class="usergroup script stylesheet" label="PLG_SYS_HEADTAG_LINKFILE_LABEL" description="PLG_SYS_HEADTAG_LINKFILE_DESC"/>
+                <field type="text" name="usergroupcustomtag" default="" class="usergroup customtag" label="PLG_SYS_HEADTAG_CUSTOMTAG_LABEL" description="PLG_SYS_HEADTAG_CUSTOMTAG_DESC"/>
+                <field type="textarea" name="usergroupcodeeditor" class="usergroup scriptdeclaration styledeclaration" label="PLG_SYS_HEADTAG_CODEEDITOR_LABEL" description="PLG_SYS_HEADTAG_CODEEDITOR_DESC"/>
+                <field type="add" name="usergroupadd" group="usergroup" />
+                <field type="update" name="usergroupupdate" group="usergroup" />
+                <field type="remove" name="usergroupremove" group="usergroup" />
+                <field type="spacer" hr="true" />
+                <field type="rules" name="usergroupruledisplay" label="PLG_SYS_HEADTAG_RULEDISPLAY_LABEL" description="PLG_SYS_HEADTAG_RULEDISPLAY_DESC"/>
+                <field type="textarea" name="usergrouprules" default="{}" filter="raw" label="" class="hidden"/>
+	    </fieldset>
+	  </fields>
+	</config>
+</extension>

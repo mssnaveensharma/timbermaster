@@ -1,0 +1,4 @@
+[13-Nov-2014 00:00:38 UTC] PHP Fatal error:  Out of memory (allocated 786432) (tried to allocate 32768 bytes) in /home/wwwtimbermasterc/public_html/templates/beez3/index.php on line 1
+[13-Nov-2014 00:00:42 UTC] PHP Fatal error:  Out of memory (allocated 786432) (tried to allocate 32768 bytes) in /home/wwwtimbermasterc/public_html/templates/beez3/index.php on line 1
+[13-Nov-2014 00:02:10 UTC] PHP Fatal error:  Out of memory (allocated 786432) (tried to allocate 32768 bytes) in /home/wwwtimbermasterc/public_html/templates/beez3/index.php on line 1
+[13-Nov-2014 00:02:13 UTC] PHP Fatal error:  Out of memory (allocated 786432) (tried to allocate 32768 bytes) in /home/wwwtimbermasterc/public_html/templates/beez3/index.php on line 1
